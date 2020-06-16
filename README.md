@@ -2,8 +2,6 @@
 
 Functions for quantifying pollutant decay in rivers based o data obtained through Lagrangian sampling in reaches with high potential for interference from ungauged lateral inputs (e.g., discharges from combined sewer overflows in an urban river). The functions are based on a sampling design where several composite samples are taken at >=2 fixed stations during passage of a pollution plume.
 
-These functions were developed in the context of research project FLUSSHYGIENE: https://www.kompetenz-wasser.de/de/project/flusshygiene/.
-
 Each function is contained in a separate script:
 
 - probInterf.R: Uses (externally) simulated discharges at several points along flow path and, based on a user-given error, computes kernel-density-based probabilities of interference for all samples at all lateral inputs. 
