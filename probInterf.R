@@ -266,7 +266,7 @@ probInterf <- function(latQpath, latQxPath,
   # write output table
   if(!is.na(outTable)){
     interfProb <- as.data.frame(interfProb)
-    interfProb$sample <- rownames(interfProb)
+    interfProb$sampleID <- rownames(interfProb)
     write.table(interfProb, file=outTable, 
                 quote=FALSE, 
                 sep=";",
