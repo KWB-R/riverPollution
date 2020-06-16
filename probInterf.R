@@ -11,13 +11,14 @@ probInterf <- function(latQpath, latQxPath,
   # read and format sample information
   sampleTimes <- dplyr::tbl_df(read.table(sampleTimesPath, sep=';', 
                                           header=TRUE,
-                                          colClasses='character',
+                                          colClasses=c('numeric',
+                                                       'character', 
+                                                       'character',
+                                                       'numeric',
+                                                       'numeric'),
                                           stringsAsFactors=FALSE))
   sampleTimes$tBeg <- as.POSIXct(sampleTimes$tBeg, format=dateTimeFormat)
   sampleTimes$tEnd <- as.POSIXct(sampleTimes$tEnd, format=dateTimeFormat)
-  sampleTimes$sample <- as.numeric(sampleTimes$sample)
-  sampleTimes$station <- as.numeric(sampleTimes$station)
-  sampleTimes$dx0 <- as.numeric(sampleTimes$dx0)
   
   # build sample IDs based on station and sample number
   sampleTimes$sampleID <- paste(sampleTimes$station, sampleTimes$sample, sep='_')
@@ -43,12 +44,8 @@ probInterf <- function(latQpath, latQxPath,
   reachInfo <- dplyr::tbl_df(read.table(reachInfoPath, 
                                         header=TRUE, 
                                         sep=';',
-                                        colClasses='character'))
-  reachInfo$v <- as.numeric(reachInfo$v)
-  reachInfo$dt <- as.numeric(reachInfo$dt)
-  reachInfo$reach <- as.numeric(reachInfo$reach)
-  reachInfo$reachLength <- as.numeric(reachInfo$reachLength)
-  
+                                        colClasses='numeric'))
+
   # add reach information to latQx
   latQx <- latQx %>% dplyr::inner_join(reachInfo, by='reach')
   
