@@ -4,7 +4,7 @@ Functions for quantifying pollutant decay in rivers based on data obtained throu
 
 Each function is contained in a separate script:
 
-- probInterf.R: Uses (externally) simulated discharges at several points along flow path and, based on a user-given error, computes kernel-density-based probabilities of interference for all samples at all lateral inputs. 
+- probInterf.R: Uses (externally) simulated discharges at several points along flow path and, based on a user-given error for the timing of lateral inputs, computes kernel-density-based probabilities of interference for all samples at all lateral inputs. 
 
 - lagrComp.R: Performs Lagrangian (travel-time based) comparisons of samples at fixed stations along river, computes 1st order rate (k, k>0 indicates concentration increase and vice versa) and writes a table containing the resulting k values and the interference probability of the underlying composite samples.
 
