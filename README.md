@@ -1,6 +1,6 @@
 # riverPollution
 
-Functions for quantifying pollutant decay in rivers based o data obtained through Lagrangian sampling in reaches with high potential for interference from ungauged lateral inputs (e.g., discharges from combined sewer overflows in an urban river). The functions are based on a sampling design where several composite samples are taken at >=2 fixed stations during passage of a pollution plume.
+Functions for quantifying pollutant decay in rivers based on data obtained through Lagrangian sampling in reaches with high potential for interference from ungauged lateral inputs (e.g., discharges from combined sewer overflows in an urban river). The functions are based on a sampling design where several composite samples are taken at >=2 fixed stations during passage of a pollution plume.
 
 Each function is contained in a separate script:
 
