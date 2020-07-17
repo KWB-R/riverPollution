@@ -6,7 +6,7 @@ probInterf <- function(latQpath, latQxPath,
                        outTable,
                        dateTimeFormat)
 {
-  require(dplyr)
+  library(dplyr)
   
   # read and format sample information
   sampleTimes <- dplyr::tbl_df(read.table(sampleTimesPath, sep=';', 

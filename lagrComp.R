@@ -7,6 +7,8 @@ lagrangianComparison <- function(reachInfoPath,
                                  dateTimeFormat,
                                  stationUp,
                                  stationDown){
+  library(dplyr)
+  
   # check order of stations
   if(stationUp >= stationDown)
     stop('stations must be numbered in downstream direction, stationUp must have smaller index as stationDown')
